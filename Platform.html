@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="Viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>何流通</title>
+    <link rel="short icon" href="Resource/icon.png">
+    <link rel="stylesheet" href="ExternalStyle.css">
+
+    <style>
+        article{
+            margin: 20px;
+        }
+        h3{
+            color: red;
+            font-size: 18px;
+            border-bottom: 1px solid #dddddd;
+            padding-bottom: 10px;
+        }
+        article p{
+            font-size: 12px;
+            text-indent: 2em;
+            line-height: 2em;
+        }
+    </style>
+
+
+<body>
+    <header class="Home_header">
+        <span>平台风采</span>
+    </header>
+
+    <section class="Home_section1">
+     <img src="Resource/banner4.png" >
+    </section>
+<article>
+    <h3 id="title"></h3>
+    <h4 id="subTitle"></h4>
+    <p id="info"></p>
+
+    <script>
+
+
+        requestMethod('get','aboutus','',function (returnStr) {
+            var h3 = document.getElementById("title");
+            var h4 = document.getElementById("subTitle");
+            var p = document.getElementById("info");
+            h3.innerHTML = returnStr.title;
+            h4.innerHTML = returnStr.subTitle;
+            p.innerHTML = returnStr.info;
+        });
+
+    </script>
+</article>
+
+
+    <footer>
+        <a href="Home.html"><img src="Resource/nav10.png" alt=""><span>小滴服务</span></a>
+        <a href="EnterpriceProject.html"><img src="Resource/nav20.png" alt=""><span>企业项目</span></a>
+        <a href="ServiceProcess.html"><img src="Resource/nav30.png" alt=""><span>服务流程</span></a>
+        <a href="" id="Pa"><img src="Resource/nav41.png" alt=""><span style="color: red">平台风采</span></a>
+        <a href="MyDroplet.html"><img src="Resource/nav50.png" alt=""><span>我的小滴</span></a>
+    </footer>
+
+
+</body>
+
+
+</html>
